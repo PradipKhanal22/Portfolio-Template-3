@@ -48,13 +48,13 @@ const About: React.FC = () => {
             className="col-span-1 row-span-2 relative overflow-hidden rounded-3xl group"
           >
             <img 
-              src="https://picsum.photos/600/800?grayscale" 
+              src="/me2.jpg" 
               alt="Profile" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
               <p className="text-white font-bold">Based in</p>
-              <p className="text-neonBlue">San Francisco, CA</p>
+              <p className="text-neonBlue">Kawasoti, Nawalpur, Nepal</p>
             </div>
           </motion.div>
 
@@ -66,7 +66,7 @@ const About: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="glass-panel p-6 rounded-3xl flex flex-col justify-center items-center text-center group hover:bg-white/5 transition-colors"
           >
-            <div className="text-4xl font-bold text-electricPink mb-2 group-hover:scale-110 transition-transform">5+</div>
+            <div className="text-4xl font-bold text-electricPink mb-2 group-hover:scale-110 transition-transform">2+</div>
             <p className="text-sm text-gray-400">Years Experience</p>
           </motion.div>
 

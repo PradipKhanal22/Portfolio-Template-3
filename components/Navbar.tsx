@@ -11,8 +11,8 @@ interface NavbarProps {
 const navItems: NavItem[] = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Work' },
   { id: 'services', label: 'Services' },
+  { id: 'projects', label: 'Work' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -67,8 +67,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           
           {/* Logo */}
           <div className="text-xl md:text-2xl font-bold font-heading tracking-tighter cursor-pointer" onClick={() => scrollTo('hero')}>
-            <span className="text-neonBlue">DEV</span>
-            <span className={`${scrolled ? 'text-gray-900 dark:text-white' : 'text-gray-900 dark:text-white'}`}>FOLIO</span>
+            <span className="text-neonBlue">PRA</span>
+            <span className={`${scrolled ? 'text-gray-900 dark:text-white' : 'text-gray-900 dark:text-white'}`}>DIP</span>
             <span className="text-electricPink">.</span>
           </div>
 

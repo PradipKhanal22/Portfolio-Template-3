@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Twitter, Download } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Facebook, Download } from 'lucide-react';
 import { containerVariants, itemVariants } from '../utils/animations';
 
 const Hero: React.FC = () => {
@@ -31,14 +31,14 @@ const Hero: React.FC = () => {
           </motion.div>
           
           <motion.h1 variants={itemVariants} className="text-6xl md:text-8xl font-bold font-heading mb-6 leading-[0.9] text-gray-900 dark:text-white tracking-tighter">
-            Digital <br />
+            Pradip <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-purpleGlow to-electricPink animate-gradient-x">
-              Architect
+              Khanal
             </span>
           </motion.h1>
           
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-lg leading-relaxed font-light">
-            Crafting immersive web experiences with modern technologies and a touch of neon. Specialized in React, AI integration, and fluid interactions.
+            A passionate web developer specializing in crafting beautiful, functional digital experiences. I transform creative ideas into stunning, responsive websites that deliver exceptional user experiences and drive business growth.
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
@@ -55,11 +55,15 @@ const Hero: React.FC = () => {
           </motion.div>
 
           <motion.div variants={itemVariants} className="mt-12 flex items-center gap-6">
-            {[Github, Linkedin, Twitter].map((Icon, idx) => (
-              <a key={idx} href="#" className="text-gray-400 hover:text-neonBlue transition-colors transform hover:scale-110">
-                <Icon size={24} />
-              </a>
-            ))}
+            <a href="https://github.com/PradipKhanal22" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neonBlue transition-colors transform hover:scale-110">
+              <Github size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/pradip-khanal-92a97333a/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neonBlue transition-colors transform hover:scale-110">
+              <Linkedin size={24} />
+            </a>
+            <a href="https://www.facebook.com/pradip.khanal.7528" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neonBlue transition-colors transform hover:scale-110">
+              <Facebook size={24} />
+            </a>
           </motion.div>
         </motion.div>
 
@@ -86,13 +90,11 @@ const Hero: React.FC = () => {
             {/* Main Card */}
             <div className="absolute inset-12 bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
                <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-               <div className="text-center z-10 p-8">
-                 <div className="w-24 h-24 mx-auto bg-gradient-to-tr from-neonBlue to-purpleGlow rounded-2xl mb-6 flex items-center justify-center shadow-[0_0_40px_rgba(79,140,255,0.5)]">
-                    <span className="text-4xl font-bold text-white">df.</span>
-                 </div>
-                 <h3 className="text-2xl font-bold text-white mb-2">High Performance</h3>
-                 <p className="text-gray-400 text-sm">Next-gen web applications built for speed and scalability.</p>
-               </div>
+               <img 
+                 src="/me.jpg" 
+                 alt="Pradip Khanal" 
+                 className="w-full h-full object-cover relative z-0"
+               />
             </div>
 
             {/* Floating Cards */}
@@ -113,11 +115,11 @@ const Hero: React.FC = () => {
               className="absolute bottom-10 -left-4 p-4 glass-panel rounded-xl shadow-lg flex items-center gap-3"
             >
               <div className="w-10 h-10 rounded-full bg-electricPink/20 flex items-center justify-center text-electricPink">
-                <span className="font-bold">AI</span>
+                <span role="img" aria-label="handshake" className="text-xl">🤝</span>
               </div>
               <div>
-                <p className="text-xs text-gray-400">Powered by</p>
-                <p className="text-sm font-bold text-white">Gemini 2.5</p>
+                <p className="text-xs text-gray-400">15+</p>
+                <p className="text-sm font-bold text-white">Happy Clients</p>
               </div>
             </motion.div>
           </div>

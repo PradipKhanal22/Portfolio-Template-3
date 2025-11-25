@@ -1,32 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { containerVariants, itemVariants } from '../utils/animations';
-import { Layout, Smartphone, Server, Cpu } from 'lucide-react';
+import { Layout, Palette, Code, Server, ShoppingCart } from 'lucide-react';
 
 const services = [
   {
-    title: "Frontend Development",
-    description: "Building responsive, pixel-perfect user interfaces with React, Next.js, and Tailwind CSS.",
+    title: "Web Development",
+    description: "Building modern, responsive websites with cutting-edge technologies and best practices.",
     icon: Layout,
     color: "text-neonBlue"
   },
   {
-    title: "Mobile Apps",
-    description: "Creating cross-platform mobile experiences using React Native and Expo.",
-    icon: Smartphone,
+    title: "UI/UX Design",
+    description: "Creating intuitive and visually stunning user interfaces that deliver exceptional user experiences.",
+    icon: Palette,
     color: "text-electricPink"
   },
   {
-    title: "Backend Systems",
-    description: "Designing scalable APIs and database architectures with Node.js, PostgreSQL, and GraphQL.",
-    icon: Server,
+    title: "Frontend Development",
+    description: "Crafting pixel-perfect, interactive user interfaces with React, Next.js, and modern CSS frameworks.",
+    icon: Code,
     color: "text-purpleGlow"
   },
   {
-    title: "AI Integration",
-    description: "Leveraging LLMs like Gemini to add intelligent features and automation to web apps.",
-    icon: Cpu,
+    title: "Backend Development",
+    description: "Designing robust and scalable server-side solutions with Node.js, APIs, and database systems.",
+    icon: Server,
     color: "text-cyanMint"
+  },
+  {
+    title: "E-commerce Solutions",
+    description: "Developing complete online store platforms with payment integration and inventory management.",
+    icon: ShoppingCart,
+    color: "text-neonBlue"
   }
 ];
 
@@ -54,7 +60,7 @@ const Services: React.FC = () => {
            whileInView="visible"
            viewport={{ once: true }}
            variants={containerVariants}
-           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
