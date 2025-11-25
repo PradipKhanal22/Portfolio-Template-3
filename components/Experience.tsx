@@ -23,7 +23,7 @@ const experience: ExperienceItem[] = [
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-24 relative overflow-hidden bg-black/10">
+    <section id="experience" className="py-24 relative overflow-hidden bg-gray-50 dark:bg-black/10">
       {/* Decorative Blur */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-purpleGlow/10 rounded-full blur-[128px]" />
 
@@ -36,19 +36,19 @@ const Experience: React.FC = () => {
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          <h3 className="text-3xl font-heading font-bold mb-10 flex items-center gap-3 dark:text-white">
+          <h3 className="text-3xl font-heading font-bold mb-10 flex items-center gap-3 text-gray-900 dark:text-white">
             <Briefcase className="text-neonBlue" /> Experience
           </h3>
           
           <div className="space-y-6">
             {experience.map((item) => (
-              <motion.div key={item.id} variants={itemVariants} className="group relative pl-8 border-l border-white/10 hover:border-neonBlue transition-colors">
-                <span className="absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-darkBg border border-neonBlue shadow-[0_0_8px_#4f8cff]" />
+              <motion.div key={item.id} variants={itemVariants} className="group relative pl-8 border-l border-gray-300 dark:border-white/10 hover:border-neonBlue transition-colors">
+                <span className="absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-white dark:bg-darkBg border border-neonBlue shadow-[0_0_8px_#4f8cff]" />
                 <div className="glass-panel p-6 rounded-2xl transition-all duration-300 group-hover:translate-x-2">
                   <span className="text-xs text-neonBlue font-mono mb-2 block tracking-wider uppercase">{item.period}</span>
-                  <h4 className="text-xl font-bold text-white mb-1">{item.role}</h4>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{item.role}</h4>
                   <p className="text-purpleGlow font-medium text-sm mb-4">{item.company}</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -64,17 +64,17 @@ const Experience: React.FC = () => {
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          <h3 className="text-3xl font-heading font-bold mb-10 flex items-center gap-3 dark:text-white">
+          <h3 className="text-3xl font-heading font-bold mb-10 flex items-center gap-3 text-gray-900 dark:text-white">
             <GraduationCap className="text-electricPink" /> Education
           </h3>
           
           <div className="space-y-6">
-            <motion.div variants={itemVariants} className="group relative pl-8 border-l border-white/10 hover:border-electricPink transition-colors">
-              <span className="absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-darkBg border border-electricPink shadow-[0_0_8px_#ff4f81]" />
+            <motion.div variants={itemVariants} className="group relative pl-8 border-l border-gray-300 dark:border-white/10 hover:border-electricPink transition-colors">
+              <span className="absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-white dark:bg-darkBg border border-electricPink shadow-[0_0_8px_#ff4f81]" />
               <div className="glass-panel p-6 rounded-2xl transition-all duration-300 group-hover:translate-x-2">
                 <span className="text-xs text-electricPink font-mono mb-2 block tracking-wider uppercase">2016 - 2020</span>
-                <h4 className="text-xl font-bold text-white mb-1">BS Computer Science</h4>
-                <p className="text-gray-400 text-sm">University of Technology</p>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">BS Computer Science</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">University of Technology</p>
               </div>
             </motion.div>
           </div>

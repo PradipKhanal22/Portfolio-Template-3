@@ -10,7 +10,7 @@ const stats = [
 
 const Stats: React.FC = () => {
   return (
-    <section className="py-12 border-y border-white/10 bg-black/30">
+    <section className="py-12 border-y border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-black/30">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, index) => (
           <motion.div
@@ -24,7 +24,7 @@ const Stats: React.FC = () => {
             <h3 className="text-4xl md:text-5xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyanMint mb-2">
               {stat.value}
             </h3>
-            <p className="text-gray-400 font-medium">{stat.label}</p>
+            <p className="text-gray-600 dark:text-gray-400 font-medium">{stat.label}</p>
           </motion.div>
         ))}
       </div>

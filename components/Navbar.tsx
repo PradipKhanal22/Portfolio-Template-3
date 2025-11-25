@@ -125,26 +125,105 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white/95 dark:bg-darkBg/98 backdrop-blur-xl md:hidden flex flex-col pt-24 px-6"
-          >
-            <div className="flex flex-col space-y-6">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollTo(item.id)}
-                  className={`text-2xl font-heading font-medium text-left ${
-                    activeSection === item.id ? 'text-neonBlue' : 'text-gray-600 dark:text-gray-400'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </motion.div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+            />
+            
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 bottom-0 z-50 w-[75%] max-w-sm md:hidden bg-white dark:bg-gray-900 shadow-2xl overflow-hidden"
+            >
+              {/* Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-neonBlue/5 via-purpleGlow/5 to-electricPink/5" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-neonBlue/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-electricPink/10 rounded-full blur-3xl" />
+              
+              <div className="relative h-full flex flex-col">
+                {/* Header */}
+                <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-white/10">
+                  <div className="text-2xl font-bold font-heading tracking-tighter">
+                    <span className="text-neonBlue">PRA</span>
+                    <span className="text-gray-900 dark:text-white">DIP</span>
+                    <span className="text-electricPink">.</span>
+                  </div>
+                  <button 
+                    onClick={() => setIsOpen(false)}
+                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+                  >
+                    <X size={24} className="text-gray-600 dark:text-gray-300" />
+                  </button>
+                </div>
+
+                {/* Navigation Items */}
+                <div className="flex-1 overflow-y-auto py-8 px-6">
+                  <div className="space-y-2">
+                    {navItems.map((item, index) => (
+                      <motion.button
+                        key={item.id}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        onClick={() => scrollTo(item.id)}
+                        className={`
+                          w-full group relative px-6 py-4 rounded-2xl text-left transition-all duration-300 overflow-hidden
+                          ${activeSection === item.id 
+                            ? 'bg-gradient-to-r from-neonBlue to-purpleGlow text-white shadow-lg shadow-neonBlue/20' 
+                            : 'bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/10'
+                          }
+                        `}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-lg font-semibold">{item.label}</span>
+                          <motion.div
+                            animate={{ x: activeSection === item.id ? 0 : -10, opacity: activeSection === item.id ? 1 : 0 }}
+                            className="w-2 h-2 rounded-full bg-white"
+                          />
+                        </div>
+                        
+                        {/* Hover effect */}
+                        {activeSection !== item.id && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-neonBlue/10 to-purpleGlow/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                        )}
+                      </motion.button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="p-6 border-t border-gray-200 dark:border-white/10">
+                  <div className="flex items-center justify-between p-4 rounded-2xl bg-gray-50 dark:bg-white/5">
+                    <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Theme</span>
+                    <button 
+                      onClick={toggleTheme}
+                      className="relative p-2 rounded-full bg-white dark:bg-gray-800 shadow-md transition-all hover:scale-110"
+                    >
+                      <motion.div
+                        initial={false}
+                        animate={{ rotate: isDark ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {isDark ? (
+                          <Sun size={20} className="text-yellow-500" />
+                        ) : (
+                          <Moon size={20} className="text-indigo-600" />
+                        )}
+                      </motion.div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

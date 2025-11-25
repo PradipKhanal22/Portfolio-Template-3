@@ -26,7 +26,7 @@ const App: React.FC = () => {
   const toggleTheme = () => setIsDark(!isDark);
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-white dark:bg-darkBg">
       <Navbar isDark={isDark} toggleTheme={toggleTheme} />
       
       <main className="space-y-0">

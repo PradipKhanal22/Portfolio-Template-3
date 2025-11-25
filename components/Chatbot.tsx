@@ -9,7 +9,7 @@ const Chatbot: React.FC = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: "Hi! I'm Neo. Ask me anything about this portfolio or my skills." }
+    { role: 'model', text: "Hi! I'm AI. Ask me anything about this portfolio or my skills." }
   ]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -78,7 +78,7 @@ const Chatbot: React.FC = () => {
                 <Bot size={20} />
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 dark:text-white text-sm">Neo Assistant</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white text-sm">Pradip's Assistant</h3>
                 <p className="text-xs text-green-500 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Online
                 </p>

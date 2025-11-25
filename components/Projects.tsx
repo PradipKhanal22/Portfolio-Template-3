@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
           className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
-            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-heading font-bold mb-4 dark:text-white">
+            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-heading font-bold mb-4 text-gray-900 dark:text-white">
               Selected <span className="text-electricPink">Works</span>
             </motion.h2>
             <motion.p variants={itemVariants} className="text-gray-600 dark:text-gray-400 max-w-lg">
@@ -94,18 +94,18 @@ const Projects: React.FC = () => {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                     <h3 className="text-xl font-bold text-white group-hover:text-neonBlue transition-colors">{project.title}</h3>
+                     <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-neonBlue transition-colors">{project.title}</h3>
                      <div className="h-1 w-12 bg-electricPink rounded-full mt-2" />
                   </div>
                 </div>
                 
-                <p className="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>
                 
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, idx) => (
-                    <span key={idx} className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10">
+                    <span key={idx} className="text-xs font-medium px-3 py-1 rounded-full bg-gray-200 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-white/10">
                       {tag}
                     </span>
                   ))}
