@@ -26,9 +26,9 @@ const Contact: React.FC = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Mail, text: "hello@developer.com", label: "Email" },
-                { icon: MapPin, text: "San Francisco, CA", label: "Location" },
-                { icon: Phone, text: "+1 (555) 123-4567", label: "Phone" }
+                { icon: Mail, text: "khanalpradip74@gmail.com", label: "Email" },
+                { icon: MapPin, text: "Kawasoti-09, Nawalpur, Gandaki Province, Nepal", label: "Location" },
+                { icon: Phone, text: "+977 9804453481", label: "Phone" }
               ].map((item, idx) => (
                 <motion.div key={idx} variants={itemVariants} className="flex items-center gap-4 group">
                   <div className="p-3 rounded-full bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 group-hover:border-neonBlue group-hover:text-neonBlue transition-all">

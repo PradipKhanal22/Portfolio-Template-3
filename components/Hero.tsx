@@ -5,7 +5,7 @@ import { containerVariants, itemVariants } from '../utils/animations';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 mb-2">
       
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-20 pointer-events-none" />

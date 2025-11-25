@@ -1,18 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Layout, PenTool, Server, Smartphone, Globe, Cpu } from 'lucide-react';
+import { Code, Database, Palette, Box, Server, GitBranch, Github, Send } from 'lucide-react';
 import { containerVariants, itemVariants } from '../utils/animations';
 import { Skill } from '../types';
 
 const skills: Skill[] = [
-  { name: 'React', icon: Code, level: 95, category: 'Frontend' },
-  { name: 'TypeScript', icon: Layout, level: 90, category: 'Frontend' },
-  { name: 'Node.js', icon: Server, level: 85, category: 'Backend' },
-  { name: 'Tailwind', icon: PenTool, level: 95, category: 'Design' },
-  { name: 'PostgreSQL', icon: Database, level: 80, category: 'Backend' },
-  { name: 'React Native', icon: Smartphone, level: 75, category: 'Frontend' },
-  { name: 'Next.js', icon: Globe, level: 90, category: 'Frontend' },
-  { name: 'GraphQL', icon: Cpu, level: 80, category: 'Backend' },
+  { name: 'HTML5', icon: Code, level: 95, category: 'Frontend' },
+  { name: 'CSS', icon: Palette, level: 90, category: 'Frontend' },
+  { name: 'Tailwind CSS', icon: Box, level: 92, category: 'Frontend' },
+  { name: 'JavaScript', icon: Code, level: 88, category: 'Frontend' },
+  { name: 'React', icon: Code, level: 90, category: 'Frontend' },
+  { name: 'Laravel', icon: Server, level: 85, category: 'Backend' },
+  { name: 'SQL', icon: Database, level: 87, category: 'Backend' },
+  { name: 'SQLite', icon: Database, level: 85, category: 'Backend' },
+  { name: 'Postman', icon: Send, level: 80, category: 'Tools' },
+  { name: 'Git', icon: GitBranch, level: 88, category: 'Tools' },
+  { name: 'GitHub', icon: Github, level: 88, category: 'Tools' },
 ];
 
 const Skills: React.FC = () => {
