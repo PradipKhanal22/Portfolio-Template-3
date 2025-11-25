@@ -53,9 +53,15 @@ const Projects: React.FC = () => {
               A curated selection of projects that demonstrate my technical expertise and design sensibilities.
             </motion.p>
           </div>
-          <motion.button variants={itemVariants} className="flex items-center gap-2 text-neonBlue font-medium hover:gap-3 transition-all">
+          <motion.a
+            variants={itemVariants}
+            href="https://github.com/PradipKhanal22"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-neonBlue font-medium hover:gap-3 transition-all"
+          >
             View Github <ArrowUpRight size={20} />
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
