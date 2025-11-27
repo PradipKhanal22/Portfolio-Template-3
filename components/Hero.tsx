@@ -49,9 +49,9 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-neonBlue/20 to-purpleGlow/20 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
 
-            <button className="px-8 py-4 rounded-full text-gray-600 dark:text-gray-300 hover:text-white font-medium transition-colors flex items-center gap-2">
+            <a href="/My resume.pdf" download="Pradip_Khanal_Resume.pdf" className="px-8 py-4 rounded-full text-gray-600 dark:text-gray-300 hover:text-white font-medium transition-colors flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-white/5">
               <Download size={18} /> Resume
-            </button>
+            </a>
           </motion.div>
 
           <motion.div variants={itemVariants} className="mt-12 flex items-center gap-6">

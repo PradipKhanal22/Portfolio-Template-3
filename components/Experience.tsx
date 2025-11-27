@@ -7,17 +7,17 @@ import { ExperienceItem } from '../types';
 const experience: ExperienceItem[] = [
   {
     id: 1,
-    role: "Senior Frontend Engineer",
-    company: "TechNova Corp",
-    period: "2022 - Present",
-    description: "Leading the migration to React 18, implementing Micro-frontends, and optimizing core web vitals by 40%."
+    role: "Web Developer Intern",
+    company: "BitMap I.T. Solution",
+    period: "2025 - 2026",
+    description: "Working as a Web Developer Intern and learning Full Stack Development. Gaining hands-on experience in building web applications, working with modern frameworks, and contributing to real-world projects."
   },
   {
     id: 2,
-    role: "Full Stack Developer",
-    company: "Creative Studio",
-    period: "2020 - 2022",
-    description: "Built scalable APIs using Node.js and delivered 15+ interactive websites for high-profile clients."
+    role: "Self-Taught Web Development",
+    company: "Freelance & Personal Projects",
+    period: "2018 - Present",
+    description: "Continuously learning and mastering web development through self-study, online courses, and building real-world projects. Developed expertise in Laravel, JavaScript, Tailwind CSS, and full-stack development."
   }
 ];
 
@@ -72,9 +72,18 @@ const Experience: React.FC = () => {
             <motion.div variants={itemVariants} className="group relative pl-8 border-l border-gray-300 dark:border-white/10 hover:border-electricPink transition-colors">
               <span className="absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-white dark:bg-darkBg border border-electricPink shadow-[0_0_8px_#ff4f81]" />
               <div className="glass-panel p-6 rounded-2xl transition-all duration-300 group-hover:translate-x-2">
-                <span className="text-xs text-electricPink font-mono mb-2 block tracking-wider uppercase">2016 - 2020</span>
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">BS Computer Science</h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">University of Technology</p>
+                <span className="text-xs text-electricPink font-mono mb-2 block tracking-wider uppercase">2021 - 2026</span>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Bachelor in Information Management</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Lumbini ICT Campus</p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="group relative pl-8 border-l border-gray-300 dark:border-white/10 hover:border-electricPink transition-colors">
+              <span className="absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-white dark:bg-darkBg border border-electricPink shadow-[0_0_8px_#ff4f81]" />
+              <div className="glass-panel p-6 rounded-2xl transition-all duration-300 group-hover:translate-x-2">
+                <span className="text-xs text-electricPink font-mono mb-2 block tracking-wider uppercase">2018 - 2021</span>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">+2 in Computer Science</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">High School</p>
               </div>
             </motion.div>
           </div>
